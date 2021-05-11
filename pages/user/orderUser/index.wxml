@@ -1,0 +1,24 @@
+<!--pages/user/orderUser/index.wxml-->
+<view class="container">
+  <!-- <view class="header">
+    <view class="pic">
+      <image class='pic-img' src="{{userInfo.avatarUrl?userInfo.avatarUrl:'/resource/img/user_img.png'}}"></image>
+      <view class='pic-name'>{{userInfo.nickName?userInfo.nickName:''}}</view>
+    </view>
+  </view> -->
+
+  <view class="list">
+    <view class="item">
+      <view class="titlename">商家名：{{personal.merchantName}}</view>
+    </view>
+    <view class="item">
+      <view class='titlename'>地址：{{personal.addressFull}}</view>
+    </view>
+    <view class="item">
+      <view class='titlename'>电话：{{personal.serviceTel}}</view>
+    </view>
+    <view class="lastChild_item">
+      <view class='lastChild'>介绍：{{personal.descriptions}}</view>
+    </view>
+  </view>
+</view>

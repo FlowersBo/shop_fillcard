@@ -1,0 +1,42 @@
+<!--pages/merchant/verification/refund/index.wxml-->
+<view class="refundWrap">
+	<view class="refund">
+		<view class="refundList">
+			<view class="refundDetail">
+				<view class="refund_img">
+					<image src="{{cardDetails.pic}}" mode="aspectFill"></image>
+				</view>
+				<view class="refund_content">
+					<view class="content content-text">{{cardDetails.merchantName}}</view>
+					<view class="content">卡种:{{cardDetails.cardType==='0'?'次卡':'储值卡'}}</view>
+					<view class="content content-text">卡名称:{{cardDetails.memberCardName}}</view>
+					<view class="content">购买金额:{{cardDetails.buyPrice}}</view>
+					<view class="content">卡内余额:{{cardDetails.cardType==='0'?cardDetails.surplusCount:cardDetails.surplusAmount}}</view>
+					<view class="content">本次退卡金额:{{cardDetails.refundAmount}}</view>
+					<view class="content">本次退卡金额将从您商家账户扣除，请保证您的账户余额充足 </view>
+				</view>
+			</view>
+			<view class="refundBtn">
+				<view class="btn" bindtap="cancelClick">取消</view>
+				<view class="btn" data-statu="open" data-opertype="1" bindtap="refundClick">拒绝</view>
+				<view class="btn" data-statu="open" data-opertype="0" bindtap="refundClick">确认退卡</view>
+			</view>
+		</view>
+
+		<!--mask-->
+		<view class="drawer_screen" data-opertype="" data-statu="close" bindtap="refundClick" wx:if="{{showModalStatus}}"></view>
+		<!--content-->
+		<!--使用animation属性指定需要执行的动画-->
+		<view animation="{{animationData}}" class="drawer_box" wx:if="{{showModalStatus}}">
+			<!--drawer content-->
+			<view class="drawer_title">退卡提示</view>
+			<view class="drawer_content">
+				{{refundDesc}}
+			</view>
+			<view class="btnWrap">
+				<view class="btn_ok" bindtap="refundClick" data-opertype="" data-statu="close">取消</view>
+				<view class="btn_ok" bindtap="submitFun" data-statu="close">确认</view>
+			</view>
+		</view>
+	</view>
+</view>

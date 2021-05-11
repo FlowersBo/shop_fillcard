@@ -1,0 +1,80 @@
+<!--pages/merchant/vipCard/additionallyCard/index.wxml-->
+<view class="additionCardWrap">
+  <view class="additionCard">
+    <form bindsubmit="formSubmit">
+      <view class="inpWrap">
+        <view class="text">会员卡名称</view>
+        <input class="inp" name="cardName" maxlength="15" placeholder="请输入会员卡名称" placeholder-style="color:#ABABAB;" style="color:{{color}}" disabled='{{disabled}}' value='{{cardName}}'></input>
+      </view>
+      <view class="inpWrap">
+        <view class="text">售卖金额</view>
+        <input class="inp" name="cardTime" type="digit" placeholder="请输入售卖金额" placeholder-style="color:#ABABAB;" value='{{cardTime}}' bindinput="watchcardTime"></input>
+      </view>
+      <view class="inpWrap">
+        <view class="text">赠送金额</view>
+        <input class="inp" name="cardPirce" type="digit" placeholder="请输入赠送金额" placeholder-style="color:#ABABAB;" value='{{cardPirce}}' bindinput='cardPirceFun'></input>
+      </view>
+      <view class="inpWrap">
+        <view class="text">折扣</view>
+        <input class="inp" name="cardOnce" maxlength='2' type="number" placeholder="0代表无折扣,85折只需输入85" placeholder-style="color:#ABABAB;" value='{{cardOnce}}' bindinput='cardOnceFun'></input>
+      </view>
+
+      <view class="validity">
+        <view class="labelWrap">
+        <checkbox-group bindchange="checkboxChange">
+          <label class="checkbox">
+            <checkbox value="cb" checked="{{checkbox}}"/>设置有效期
+          </label>
+        </checkbox-group>
+        </view>
+        <view class='items {{state}} ft-30 h90 flex flex-vc bd-bt-f4f pd-lt20 pd-rt20'>
+          <label class='item-left color-333 mg-rt10' for='sex'>有效期</label>
+          <radio-group class="item-right radio-group" name="radioGroup">
+            <!-- bindchange="validityFun" -->
+            <label class="radio">
+              <radio value="0" checked="{{checked1}}">
+                <view class="radio_child_timer">
+                  <text>多长时间过期</text>
+                  <input class="radio_inp" name="timer" type="number" maxlength="5" value='{{sNum}}' bindinput="watchNumber"></input>天
+                </view>
+              </radio>
+              <radio value="1" checked="{{checked2}}">
+                <view class="radio_child_timer">
+                  <text>过期截止时间</text>
+                  <view class="section">
+                    <picker style="color:#ff00ff" name="startTime" mode="date" fields="day" value="{{time}}" start="2020-01-01" end="2025-12-31" bindchange="bindTimeChange">
+                      {{startTime?startTime:'请选择截止日期'}}
+                    </picker>
+                  </view>
+                </view>
+              </radio>
+            </label>
+          </radio-group>
+        </view>
+      </view>
+
+
+      <view class="pictures">
+        <view class="gallery">
+          <view class="picturesText">会员卡封面</view>
+          <view class="item" wx:for="{{uploadPics}}" id="{{index}}" wx:key="index">
+            <image src="{{item}}" data-src="{{item}}" mode="aspectFill" />
+            <view class="item_mask" bindtap="chooseImage">--点击可修改封面--</view>
+            <!-- bindtap="previewImage" -->
+            <!-- <view class="delete" bindtap="delete" data-key="{{item}}" data-index="{{index}}">X</view> -->
+          </view>
+          <view class="{{isShow}}" bindtap="chooseImage">
+            <view class='addIcon'>+</view>
+          </view>
+        </view>
+        <view class='inputWrap'>
+          <view class="picturesText">会员卡消费须知</view>
+          <textarea class="areas" placeholder='请输入~' placeholder-class="placeholderStyle" name="placeholder" maxlength="-1" value='{{placeholder}}' auto-height="{{auto_height}}" bindinput="inputs">
+          </textarea>
+          <!-- <text class='areasText'>{{cursor?cursor:0}}/max</text> -->
+        </view>
+      </view>
+      <button class="fromBtn" disabled='{{disabledBtn}}' formType="submit">提交</button>
+    </form>
+  </view>
+</view>

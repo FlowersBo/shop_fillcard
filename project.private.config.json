@@ -1,0 +1,35 @@
+{
+  "condition": {
+    "plugin": {
+      "list": []
+    },
+    "game": {
+      "list": []
+    },
+    "gamePlugin": {
+      "list": []
+    },
+    "miniprogram": {
+      "list": [
+        {
+          "id": 0,
+          "name": "pages/index/index",
+          "pathName": "pages/index/index",
+          "query": "",
+          "scene": null
+        },
+        {
+          "name": "测试",
+          "pathName": "pages/cs/index",
+          "query": "",
+          "scene": null
+        },
+        {
+          "name": "手机核销",
+          "pathName": "pages/merchant/mobileQuery/index",
+          "scene": null
+        }
+      ]
+    }
+  }
+}

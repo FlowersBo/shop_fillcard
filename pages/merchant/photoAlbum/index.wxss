@@ -1,0 +1,98 @@
+/* pages/merchant/photoAlbum/index.wxss */
+page{
+  background-color: #f2f2f2;
+}
+.galleryWrap{
+  width: 100%;
+}
+.gallery {    
+  width: 100%;
+}
+/*add按钮*/
+.addIconWrap{
+  position:fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 110rpx;
+  background-color: #f2f2f2;
+  z-index: 100;
+}
+.addIcon{
+  width: 100%;
+  height: 80rpx;
+  text-align: center;
+  line-height: 80rpx;
+  font-size: 36rpx;
+  background: #FBEF4F;
+  color: #200;
+  margin-top: 30rpx;
+}
+.itemWrap{
+  width: 100%;
+  margin-top: 120rpx;
+  /* margin: 0 auto; */
+  display: flex;    
+  justify-content: flex-start;   
+  /* flex-direction: row; */
+  flex-wrap: wrap;
+}
+/*每张图片所占容器*/
+.item {    
+  /* position: relative;     */
+  box-sizing: border-box;
+  padding: 10rpx 5rpx;
+}
+.item image{
+  width: 100%;
+  height: 100%;
+}
+
+.itemBtn{
+  width: 100%;
+  height: 70rpx;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  font-size: 28rpx;
+}
+.btn{
+  width: 46%;
+  height: 46rpx;
+  background-color: #FBEF4F;
+  border-radius: 10rpx;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  color: #200;
+}
+.btn:last-child{
+  background-color: #FE0000;
+  color: #fff;
+}
+.icons{
+  font-size: 32rpx;
+  margin-bottom: 15rpx;
+}
+
+
+
+
+
+
+
+
+
+
+
+/*删除按钮*/
+/* .delete {    
+  position:absolute;
+  right:0;
+  top:0;
+  opacity:1;
+  height: 36rpx;
+  font-size:22rpx;
+  font-weight:700;
+  padding:0 8rpx 0 10rpx;
+} */

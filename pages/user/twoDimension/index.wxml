@@ -1,0 +1,10 @@
+<!--pages/user/twoDimension/index.wxml-->
+<view class="twoDimensionWrap">
+  <view class="twoDimension">
+    <view class="shopName">{{personal.merchantName}}</view>
+    <view class="shopLocation">{{personal.addressFull}}</view>
+    <view class="shopImg">
+      <image src="{{mpCode}}" bindtap="imgYu" data-src="{{mpCode}}"></image>
+    </view>
+  </view>
+</view>

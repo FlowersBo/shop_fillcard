@@ -1,0 +1,56 @@
+<!--pages/index/merchant/vipCard/index.wxml-->
+<view class="sellCardWrap">
+  <view class="sellCard">
+    <view class="additionWrap">
+      <view class="addition" bindtap="additionFun">添加会员卡</view>
+    </view>
+    <block wx:if="{{isFang}}">
+      <view class="cardListWrap">
+        <view class="cardList">
+          <view class="cards" wx:for="{{cardList}}" wx:key="id">
+            <view class="cardChild" data-productName="{{item.productName}}" data-productId="{{item.productId}}" bindtap="cardManagement">
+              <view class="cardChild_particulars">
+                <image class="cardChild_img" src="{{item.pic?item.pic:'/resource/img/default.jpg'}}"></image>
+                <view class="contentWrap">
+                  <view class="shopName">{{item.productName}}</view>
+                  <view class="cardsDetailsWrap">
+                    <!-- <view class="cardsDetails"> -->
+                    <!-- <view class="caedTime">{{item.productName}}</view> -->
+                    <view wx:if='{{cardType==0}}' class="transfer">
+                      <view class="transfer_card">{{item.totalCount}}次</view>
+                      <view class="transfer_price">{{item.price}}元</view>
+                    </view>
+                    <view wx:else class="transfer">
+                      <view style="color:#F17941;font-size:32rpx;" class="transfer_card">储值卡</view>
+                      <view class="transfer_price">{{item.price}}元</view>
+                    </view>
+                    <!-- </view> -->
+                    <icon class="iconfont icon-iconfontxiangxia1copy19"></icon>
+                  </view>
+                  <view class="residueDegreeWrap">
+                    <view wx:if="{{item.validityNumDesc}}" class="periodValidity">{{item.validityNumDesc}}</view>
+                    <view wx:else class="periodValidity">{{item.validityNumDesc}}</view>
+                    <view class="residueDegree">{{item.statusDesc}}</view>
+                  </view>
+                  <view class="btnWrap">
+                   <!-- wx:if="{{item.statusDesc=='正常'}}" -->
+                    <view class="btns">
+                      <button class="btn" hover-class="none" data-productId="{{item.productId}}" data-status="{{item.status}}" catchtap="soldOutFun">{{item.status==0?'下架':'上架'}}</button>
+                      <button class="btn" hover-class="none" data-productId="{{item.productId}}" data-cardType="{{item.cardType}}" catchtap="amendFun">修改</button>
+                    </view>
+                  </view>
+                </view>
+              </view>
+            </view>
+          </view>
+        </view>
+      </view>
+    </block>
+    <view class="boxWrap" wx:else>
+      <view class="box">
+        <icon class="iconfont icon-icon_wuxiaoxi-"></icon>
+        <view>亲亲，暂无会员卡稍后再来吧~</view>
+      </view>
+    </view>
+  </view>
+</view>

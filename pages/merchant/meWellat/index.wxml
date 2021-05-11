@@ -1,0 +1,45 @@
+<!--pages/merchant/meWallet/index.wxml-->
+<view class="meWalletWrap">
+  <view class="meWallet">
+    <view class="balanceWrap">
+      <view class="balance_text">余额：{{amount}}元</view>
+      <view class="withdrawWrap">
+        <view class="withdraw" bindtap="bankCard">
+          <icon class="iconfont ico icon-yinhangqia"></icon>
+          <view>绑定银行卡</view>
+        </view>
+        <view class="withdraw" bindtap="withdrawFun">
+          <icon class="iconfont ico icon-tixian"></icon>
+          <view>提现</view>
+        </view>
+        <view class="withdraw" bindtap="withdrawRecordFun">
+          <icon class="iconfont ico icon-tixianjilu"></icon>
+          <view>提现记录</view>
+        </view>
+      </view>
+    </view>
+    <block wx:if="{{isFang}}">
+    <view class="particularsWrap">
+      <view class="particulars">
+        <view class="particularsItem" wx:for="{{billList}}" wx:key="id">
+          <view class="item_left">
+            <view class="itemWrap">
+              <view class="item_start">{{item.billTypeDesc}}</view>
+              <view class="item_timer">{{item.billDate}}</view>
+            </view>
+            <view class="item_details">{{item.remark}}</view>
+          </view>
+          <view class="money">{{item.billAmount}}元</view>
+        </view> 
+      </view>
+    </view>
+    </block>
+    <view class="boxWrap" wx:else>
+      <view class="box">
+        <icon class="iconfont icon-icon_wuxiaoxi-"></icon>
+        <view>亲亲，暂无消费明细稍后再来吧~</view>
+      </view>
+    </view>
+  </view>
+</view>
+

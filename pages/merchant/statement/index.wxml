@@ -1,0 +1,90 @@
+<!--pages/index/merchant/statement/index.wxml-->
+<view class="statementWrap">
+  <view class="statement">
+    <form bindsubmit="formSubmit">
+      <view class="findYear">
+        <view class="findYear_inp">
+          <view class="section">
+            <picker name="startTime" mode="date" fields="day" value="{{time}}" start="2015-01-01" end="2023-12-31" bindchange="bindTimeChange">
+              {{startTime?startTime:'请选择开始时间'}}
+            </picker>
+          </view>
+          <view class="section">
+            <picker name="endTime" mode="date" fields="day" value="{{time}}" start="2015-01-01" end="2023-12-31" bindchange="bindTimeChange1">
+              {{endTime?endTime:'请选择结束时间'}}
+            </picker>
+          </view>
+        </view>
+        <view class="btnWrap">
+          <button formType="submit" class="findYear_btn">查找</button>
+        </view>
+      </view>
+    </form>
+    <view class="informationWrap">
+      <view class="information">
+        <view class="information_sales">
+          <view class="sales">总交易数</view>
+          <view class="amount">{{tradeStat.saleCountTotal}}张</view>
+        </view>
+        <view class="information_sales">
+          <view class="sales">一手卡交易数</view>
+          <view class="amount">{{tradeStat.saleCountDirect}}张</view>
+        </view>
+        <view class="information_sales">
+          <view class="sales">二手卡交易数</view>
+          <view class="amount">{{tradeStat.saleCountResell}}张</view>
+        </view>
+      </view>
+      <view class="information">
+        <view class="information_sales">
+          <view class="sales">总交易金额</view>
+          <view class="amount">{{tradeStat.tradeAmountTotal}}元</view>
+        </view>
+        <view class="information_sales">
+          <view class="sales">一手卡交易金额</view>
+          <view class="amount">{{tradeStat.tradeAmountDirect}}元</view>
+        </view>
+        <view class="information_sales">
+          <view class="sales">二手卡转让收入</view>
+          <view class="amount">{{tradeStat.tradeAmountResell}}元</view>
+        </view>
+      </view>
+    </view>
+    <block wx:if="{{isFang}}">
+      <view class="memberList">
+        <!-- <view class="memberTab">
+        <view class="tab">
+          <view class="tab_text">按办卡时间</view>
+          <icon class="iconfont icon-arrow-left"></icon>
+        </view>
+        <view class="tab" bindtap="cardJoinTime">
+          <view class="tab_text">按消费时间</view>
+          <icon class="iconfont icon-arrow-left"></icon>
+        </view>
+        <view class="tab" bindtap="cards">
+          <view class="tab_text">按次数</view>
+          <icon class="iconfont icon-arrow-left"></icon>
+        </view>
+      </view> -->
+        <view class="memberList_content">
+          <view class="member_item {{index % 2 == 0?'categ1':'categ'}}" wx:for="{{memberList}}" wx:key="id">
+            <view class="item_left">
+              <view class="itemName">{{item.memberCardName}}</view>
+              <view class="itemPhone">{{item.telephone}}</view>
+            </view>
+            <view class="item_right">
+              <view class="itemJoin">消费时间：{{item.createdTime}}</view>
+              <view class="itemCards">{{item.remark}}</view>
+            </view>
+          </view>
+        </view>
+      </view>
+    </block>
+    <view class="boxWrap" wx:else>
+      <view class="box">
+        <icon class="iconfont icon-icon_wuxiaoxi-"></icon>
+        <view>亲亲，暂无报表记录稍后再来吧~</view>
+      </view>
+    </view>
+  </view>
+</view>

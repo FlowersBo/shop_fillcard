@@ -1,0 +1,227 @@
+/* pages/merchant/vipCard/additionallyCard/index.wxss */
+page {
+  width: 100%;
+  background-color: #f2f2f2;
+}
+
+.additionCardWrap {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.additionCard {
+  width: 97%;
+  background-color: #fff;
+  border-radius: 20rpx;
+  margin: 20rpx 0;
+  box-sizing: border-box;
+  padding: 15rpx;
+  color: #808080;
+}
+
+.inpWrap {
+  width: 100%;
+  height: 120rpx;
+  line-height: 150rpx;
+  display: flex;
+  justify-content: left;
+  border-bottom: 1rpx solid #f2f2f2;
+  white-space: nowrap;
+  font-size: 32rpx;
+}
+
+.inp {
+  flex: 1;
+  height: 150rpx;
+  line-height: 150rpx;
+  margin-left: 15rpx;
+}
+/* 是否能选 */
+.labelWrap{
+  width: 100%;
+  font-size: 36rpx;
+}
+.flang{
+  display: none;
+}
+.state{
+  display: block;
+}
+/* 单选 */
+.validity{
+  margin-top: 10rpx;
+  border-bottom: 1rpx solid #f2f2f2;
+  padding-bottom: 5rpx;
+}
+checkbox{
+  transform: scale(0.8)
+}
+.radio {
+  width: 100%;
+  height: 200rpx;
+  font-size: 36rpx;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+}
+
+radio .wx-radio-input {
+  border-radius: 50%;
+  width: 28rpx;
+  height: 28rpx;
+}
+.radio_child_timer{
+  width: 100%;
+  display: flex;
+  align-items: center;
+}
+.radio_inp{
+  width: 215rpx;
+  height: 50rpx;
+  font-size: 28rpx;
+  text-align: center;
+  border: 1rpx solid #ddd;
+  margin: 0 10rpx;
+}
+
+/* 选中后的样式 （可根据设计稿需求自己修改） */
+radio .wx-radio-input.wx-radio-input-checked::before {
+  border-radius: 50%;
+  width: 50rpx;
+  height: 50rpx;
+  line-height: 50rpx;
+  text-align: center;
+  font-size: 28rpx; /* 对勾大小 */
+  color: #fff; /* 对勾颜色 */
+  background: #FFE500;
+  border-color: #FFE500;
+}
+
+
+/* 日期选择 */
+.section{
+  width: 400rpx;
+  height: 100%;
+  box-sizing: border-box;
+  padding-left: 50rpx;
+  font-size: 32rpx;
+  color: #ADADAD;
+}
+
+/* 上传图片 */
+.pictures{
+  width: 100%;
+}
+.picturesText{
+  width: 100%;
+  height: 60rpx;
+  line-height: 60rpx;
+  margin-bottom: 20rpx;
+}
+.gallery {    
+  width:100%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  box-sizing: border-box;
+  padding-bottom: 16rpx;
+  border-bottom: 1rpx solid #f2f2f2;
+}
+/*每张图片所占容器*/
+.item {    
+  position: relative;    
+  width: 90%;
+  height: 320rpx;
+  border-radius: 10rpx;
+}
+.item_mask{
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.1);
+  text-align: center;
+  line-height: 320rpx;
+  font-size: 32rpx;
+  color: #fff;
+  border-radius: 10rpx;
+}
+.item image{
+  width: 100%;
+  height: 100%;
+  border-radius: 10rpx;
+}
+/*add按钮*/
+.item .addIcon{
+  float: left;
+  width:100%;
+  height:320rpx;
+  text-align:center;
+  line-height:320rpx;
+  font-size:80rpx;
+  background: rgba(0, 0, 0, 0);
+  border: 2rpx dashed #808080;
+  border-radius: 10rpx;
+  color: #555;
+}
+.none{
+  display: none;
+}
+/*删除按钮*/
+/* .delete {    
+  position:absolute;
+  right:0;
+  top:0;
+  background-color:#ccc;
+  opacity:0.8;
+  height: 36rpx;
+  font-size:22rpx;
+  font-weight:700;
+  padding:0 8rpx 0 10rpx;
+} */
+
+.btn{
+  width: 94%;
+  margin-top: 30rpx;
+  margin-bottom: 30rpx;
+}
+
+/* textarea输入 */
+.inputWrap{
+  /* position: relative; */
+  width: 100%;
+  /* height: 460rpx; */
+  border-bottom: 2rpx solid #fafafa;
+  margin-bottom: 10rpx;
+}
+.areas{
+  width: 100%;
+  height: 400rpx;
+  color: #888888;
+  font-size: 28rpx;
+}
+/* .areasText{
+  position: absolute;
+  right: 0rpx;
+  bottom: 0rpx;
+  color: #ccc;
+  font-size: 28rpx;
+} */
+.placeholderStyle{
+  color:#aaa;
+  font-size:32rpx;
+}
+
+/* 表单提交 */
+.fromBtn{
+  width: 100%;
+  height: 90rpx;
+  line-height: 90rpx;
+  text-align: center;
+  font-size: 40rpx;
+  background-color: #FFE500;
+  margin: 20rpx 0;
+}

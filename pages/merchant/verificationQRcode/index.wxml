@@ -1,0 +1,13 @@
+<!--pages/merchant/verificationQRcode/index.wxml-->
+<view class="verificationWrap">
+  <view class="verification">
+    <view class="cardsWrap">
+      <view class="cards_name">{{card.merchantName}}</view>
+      <view class="cards_content">{{card.productName}}</view>
+        <view class="btnWrap">
+          <button class="btn btn1" bindtap="calloff">取消</button>
+          <button class="btn" bindtap="formPrice" disabled='{{disabled}}'>{{codename}}</button>
+        </view>
+      </view>
+  </view>
+</view>

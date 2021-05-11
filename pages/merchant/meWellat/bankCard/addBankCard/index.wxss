@@ -1,0 +1,63 @@
+/* pages/merchant/meWellat/bankCard/index.wxss */
+page{
+  width: 100%;
+  background-color: #f2f2f2;
+}
+.bankCardWrap{
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.bankCard{
+  width: 95%;
+  height: 500rpx;
+  margin-top: 30rpx;
+}
+.inpWrap{
+  width: 100%;
+  height: 500rpx;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+}
+.inp{
+  width: 100%;
+  height: 90rpx;
+  line-height: 90rpx;
+  background-color: #DFDFDF;
+  box-sizing: border-box;
+  padding-left: 25rpx;
+  font-size: 32rpx;
+  border-radius: 10rpx;
+}
+.verificationWrap{
+  width: 100%;
+  display: flex;
+  justify-content: left;
+}
+.verificationWrap .inp{
+  width: 300rpx;
+}
+.verification{
+  margin-left: 20rpx;
+  width: 220rpx;
+  height: 90rpx;
+  background-color: #FDE50D;
+  border-radius: 10rpx;
+  line-height: 90rpx;
+  text-align: center;
+  font-size: 32rpx;
+}
+.verification_btn{
+  width: 180rpx;
+  height: 80rpx;
+  background-color: rgb(160, 60, 21);
+  border-radius: 30rpx;
+  line-height: 80rpx;
+  text-align: center;
+  font-size: 36rpx;
+  color: #fafafa;
+}

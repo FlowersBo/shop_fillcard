@@ -1,0 +1,90 @@
+<!--pages/index/merchant/index.wxml-->
+<view class="merchantWrap">
+	<!-- <web-view src=""></web-view> -->
+	<swiper class="merchant_img" indicatorDots="{{indicatorDots}}" indicator-color="#fafafa" indicator-active-color="#FDE50D" circular="{{circular}}" interval="{{interval}}" autoplay="{{autoplay}}" duration="{{duration}}">
+		<block wx:for="{{records.bannerList}}" wx:key="id">
+			<swiper-item>
+				<image src="{{item}}" class="slide-image" />
+			</swiper-item>
+		</block>
+	</swiper>
+	<view class="merchant">
+		<view class="shopName">{{records.merchantName}}</view>
+		<view class="shopContent">
+			<view class="shopContentBox" bindtap="scanCode">
+				<!-- <icon class="iconfont icons icon-tubiaozhizuomoban"></icon> -->
+				<view class="merchantImg">
+					<image src="/resource/img/merchantImg/destroy.png"></image>
+				</view>
+				<view class="shopContentBox_text">扫码核销</view>
+			</view>
+
+			<view class="shopContentBox" bindtap="gotomobileQuery">
+				<!-- <icon class="iconfont icons icon-tubiaozhizuomoban"></icon> -->
+				<view class="merchantImg">
+					<image src="/resource/img/merchantImg/destroy.png"></image>
+				</view>
+				<view class="shopContentBox_text">手机号核销</view>
+			</view>
+
+			<view class="shopContentBox" bindtap="vipCard" data-cardType="0">
+				<view class="merchantImg">
+					<image src="/resource/img/merchantImg/timeCard.png"></image>
+				</view>
+				<view class="shopContentBox_text">次卡管理</view>
+			</view>
+			<!-- <navigator class="shopContentBox" url="/pages/merchant/member/index">
+        <icon class="iconfont icons icon icon-huiyuan"></icon>
+        <view class="shopContentBox_text">次卡会员</view>
+      </navigator> -->
+			<navigator class="shopContentBox" url="/pages/merchant/member/index">
+				<view class="merchantImg">
+					<image src="/resource/img/merchantImg/member.png"></image>
+				</view>
+				<view class="shopContentBox_text">会员管理</view>
+			</navigator>
+			<navigator class="shopContentBox" url="/pages/merchant/statement/index">
+				<view class="merchantImg" style="width:90rpx;height:90rpx;">
+					<image src="/resource/img/merchantImg/statement.png"></image>
+				</view>
+				<view class="shopContentBox_text">会员卡报表</view>
+			</navigator>
+			<view class="shopContentBox" bindtap="vipCard" data-cardType="1">
+				<view class="merchantImg" style="width:90rpx;height:90rpx;">
+					<image src="/resource/img/merchantImg/valueCard.png"></image>
+				</view>
+				<view class="shopContentBox_text">储值卡管理</view>
+			</view>
+			<navigator class="shopContentBox" url="/pages/merchant/generalizeStatement/index">
+				<view class="merchantImg">
+					<image src="/resource/img/merchantImg/generalize.png"></image>
+				</view>
+				<view class="shopContentBox_text">推广报表</view>
+			</navigator>
+			<navigator class="shopContentBox" url="/pages/merchant/audit/index">
+				<view class="merchantImg">
+					<image src="/resource/img/merchantImg/audit.png"></image>
+				</view>
+				<view class="shopContentBox_text">审核</view>
+			</navigator>
+			<navigator class="shopContentBox" url="/pages/merchant/multipleCard/index?merchantId={{records.merchantId}}">
+				<view class="merchantImg" style="width:100rpx;height:90rpx;">
+					<image src="/resource/img/merchantImg/timesUp.png"></image>
+				</view>
+				<view class="shopContentBox_text">多倍储值卡</view>
+			</navigator>
+			<navigator class="shopContentBox" url="/pages/merchant/photoAlbum/index?merchantId={{records.merchantId}}">
+				<view class="merchantImg" style="width:100rpx;">
+					<image src="/resource/img/merchantImg/photoAlbum.png"></image>
+				</view>
+				<view class="shopContentBox_text">图集</view>
+			</navigator>
+			<navigator class="shopContentBox" url="/pages/merchant/statistics/index">
+				<view class="merchantImg">
+					<image src="/resource/img/merchantImg/statistics.png"></image>
+				</view>
+				<view class="shopContentBox_text">卡种统计</view>
+			</navigator>
+		</view>
+	</view>
+</view>

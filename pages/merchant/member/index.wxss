@@ -1,0 +1,175 @@
+/* pages/index/merchant/member/index.wxss */
+page{
+  width: 100%;
+  background-color: #F2F2F2;
+}
+.merchantWrap{
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.merchant{
+  width: 96%;
+}
+
+/* 会员统计 */
+.statistics{
+  width: 100%;
+  height: 150rpx;
+  border-radius: 20rpx;
+  background-color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  box-sizing: border-box;
+  padding: 0 30rpx;
+  margin-top: 30rpx;
+  box-shadow: 10rpx 10rpx 10rpx rgba(87, 87, 87, 0.5)/*blur值为10rpx*/
+}
+.balance{
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  text-align: center;
+  font-size: 32rpx;
+  box-sizing: border-box;
+  padding: 20rpx 0;
+}
+.icons{
+  font-size: 60rpx;
+  color: #FEB81F;
+}
+
+/* 搜索 */
+.phoneFidWrap{
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.phoneFid{
+  width: 67%;
+  height: 60rpx;
+  border: 1rpx solid #ddd;
+  background-color: #EBEBEB;
+  border-radius:35rpx; 
+  margin: 30rpx 0;
+  position: relative;
+}
+.phoneFid_inp{
+  width: 85%;
+  height: 99%;
+  font-size: 28rpx;
+  border-radius:35rpx 0 0 35rpx; 
+  color: #000;
+  box-sizing: border-box;
+  padding-left: 20rpx;
+}
+.phoneFid_icon{
+  width: 14%;
+  height: 99%;
+  line-height: 60rpx;
+  position: absolute;
+  top: 0;
+  right: 0;
+  text-align: center;
+}
+.icon-fangdajing{
+  font-size: 50rpx;
+}
+.addition{
+  width: 30%;
+  height: 60rpx;
+  text-align: center;
+  line-height: 60rpx;
+  border-radius: 35rpx;
+  background-color: #FDE60C;
+  font-size: 28rpx;
+}
+.memberList{
+  width: 100%;
+  background-color: #fff;
+  border-radius: 20rpx;
+  padding-bottom: 20rpx;
+}
+.memberTab{
+  width: 100%;
+  height: 70rpx;
+  border-bottom: 1rpx solid #ddd;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+.tab{
+  width: 30%;
+  height: 70rpx;
+  display: flex;
+  font-size: 28rpx;
+  justify-content: center;
+  line-height: 70rpx;
+  color: rgb(143, 143, 143);
+}
+.icon-arrow-left{
+  font-size: 40rpx;
+}
+.memberList_content{
+  width: 100%;
+  padding: 10rpx 0;
+}
+.categ{
+}
+.categ1{
+  background-color: rgb(247, 245, 245);	
+}
+.member_item{
+  width: 100%;
+  height: 150rpx;
+  display: flex;
+  justify-content: space-between;
+  box-sizing: border-box;
+  padding: 0 10rpx;
+}
+.itemName{
+  font-size: 32rpx;
+  padding: 5rpx 0;
+}
+.itemPhone{
+  font-size: 28rpx;
+  padding: 5rpx 0;
+}
+.itemConsumption{
+  font-size: 24rpx;
+  padding: 5rpx 0;
+}
+.item_right{
+  text-align: right;
+}
+.itemJoin{
+  font-size: 24rpx;
+  padding: 5rpx 0;
+}
+.itemCards{
+  font-size: 30rpx;
+  padding: 5rpx 0;
+}
+/* 无 */
+.boxWrap{
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.box{
+  height: 500rpx;
+  margin-top: 40%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  color: #757575;
+}
+.icon-icon_wuxiaoxi-{
+  font-size: 400rpx;
+}

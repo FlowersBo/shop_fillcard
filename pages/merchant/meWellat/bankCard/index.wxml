@@ -1,0 +1,21 @@
+<!--pages/merchant/meWellat/bankCard/index.wxml-->
+<view class="bankCardWrap">
+  <view class="bankCard">
+    <view class="backWrap">
+      <view class="back">
+        <view class="backName">{{bank.cardBank}}</view>
+        <view class="backType">储蓄卡</view>
+      </view>
+      <view class="backNumber">
+        <text wx:for="{{3}}" wx:key="index" class="dotWrap" decode="{{true}}" >
+          <text wx:for="{{4}}" wx:key="index" class="dot"></text>&ensp;
+        </text>
+        <text class="number">{{bank.cardNO4}}</text>
+      </view>
+    </view>
+    <view class="addBackCard" bindtap="addBackCard">
+      <icon class="iconfont icon-yinhangqia"></icon>
+      <view class="add-text">更换银行卡</view>
+    </view>
+  </view>
+</view>

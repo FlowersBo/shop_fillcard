@@ -1,0 +1,77 @@
+/* pages/merchant/meWellat/bankCard/index.wxss */
+page{
+  width: 100%;
+  background-color: #f2f2f2;
+}
+.bankCardWrap{
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.bankCard{
+  width: 95%;
+  height: 500rpx;
+  margin-top: 30rpx;
+}
+.backWrap{
+  width: 100%;
+  height: 300rpx;
+  border-radius: 20rpx;
+  background-color: #32639E;
+  color: #f2f2f2;
+  box-sizing: border-box;
+  padding: 30rpx;
+  /* color: #600030; */
+}
+.backType{
+  color: #DDA7AD;
+  font-size: 32rpx;
+}
+.back{
+  width: 100%;
+}
+.backNumber{
+  width: 100%;
+  height: 100rpx;
+  box-sizing: border-box;
+  padding: 0 10rpx;
+  font-size: 50rpx;
+  display: flex;
+  justify-content: center;
+}
+.dotWrap{
+  display: inline-block;
+}
+.dot{
+  display: inline-block;
+  width: 10rpx;      
+  height: 10rpx;      
+  border: 1rpx solid #f2f2f2;      
+  border-radius: 10rpx;      
+  background-color: #f2f2f2;  
+  margin: 0 4rpx;    
+}
+.number{
+  display: flex;
+  align-items: center;
+}
+.addBackCard{
+  width: 100%;
+  height: 100rpx;
+  margin-top: 100rpx;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.icon-yinhangqia{
+  color: #596C8E;
+  margin-right: 10rpx;
+  font-size: 50rpx;
+}
+.add-text{
+  color: #7D8EA7;
+  font-size: 32rpx;
+}

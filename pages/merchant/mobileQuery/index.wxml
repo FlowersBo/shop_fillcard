@@ -1,0 +1,36 @@
+<!--pages/mobileQuery/index.wxml-->
+<view class="mobileQuery">
+  <view class="phoneFidWrap">
+    <view class="phoneFid">
+      <input class="phoneFid_inp" placeholder="请输入手机号查询会员卡列表" placeholder-style="color:#B5B5B5;" bindblur="telephoneFun"
+        maxlength="11" value="{{telephone}}">
+      </input>
+      <view class="phoneFid_icon" bindtap="formSubmit">
+        <icon class="iconfont icon-fangdajing"></icon>
+      </view>
+    </view>
+  </view>
+  <block wx:if="{{isFang}}">
+    <view class="cardWrap">
+      <view class="card" wx:for="{{memberList}}" wx:key="id" data-memberCardId="{{item.memberCardId}}"
+        data-memberCardName="{{item.memberCardName}}" data-cardType="{{item.cardType}}" bindtap="gotocardConsume">
+        <view class="card_center">
+          <image class="card_img" src="/resource/img/vipcard.jpg"></image>
+          <view class="card_content">
+            <view class="card_content_top">{{item.memberCardName}}</view>
+            <view wx:if="{{item.cardType=='0'}}" class="card_content_centent">剩余{{item.surplusCount}}次</view>
+            <view wx:else class="card_content_centent">剩余{{item.surplusAmount}}元</view>
+            <view wx:if="{{item.validity}}" class="card_content_bottom">有效期至：{{item.validity}}</view>
+            <view wx:else class="card_content_bottom"></view>
+          </view>
+        </view>
+      </view>
+    </view>
+  </block>
+  <view class="boxWrap" wx:else>
+    <view class="box">
+      <icon class="iconfont icon-icon_wuxiaoxi-"></icon>
+      <view>亲亲，该会员暂无会员卡稍后再来吧~</view>
+    </view>
+  </view>
+</view>

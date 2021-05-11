@@ -1,0 +1,17 @@
+<!--pages/merchant/member/additionVip/selectCard/index.wxml-->
+<!--pages/user/meVipcard/index.wxml-->
+<view class="meVipcardWrap">
+  <view class="meVipcard">
+      <view class="card" wx:for="{{cardList}}" wx:key="id" data-productId="{{item.productId}}" data-productName="{{item.productName}}" data-cardType="{{item.cardType}}" bindtap="gotocardConsume">
+        <view class="card_center">
+          <image class="card_img" src="/resource/img/vipcard.jpg"></image>
+          <view class="{{item.isShow}} card_content">
+            <view class="card_content_top">{{item.productName}}</view>
+            <view wx:if="{{item.cardType=='0'}}" class="card_content_centent">{{item.totalCount}}次</view>
+            <view wx:else class="card_content_centent">{{item.price}}元</view>
+            <view class="card_content_bottom">{{item.validityNumDesc}}</view>
+          </view>
+        </view>
+      </view>
+  </view>
+</view>

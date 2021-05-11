@@ -1,0 +1,65 @@
+<!--pages/index/merchant/member/index.wxml-->
+<view class="merchantWrap">
+	<view class="merchant">
+
+		<view class="statistics">
+			<view class="balance">
+				<icon class="iconfont icons icon-huiyuan1"></icon>
+				<text class="statisticsText">会员总数:{{cardstatistics.memberCount?cardstatistics.memberCount:0}}人</text>
+			</view>
+			<view class="balance">
+				<icon class="iconfont icons icon-huiyuanqia1"></icon>
+				<text class="statisticsText">会员卡总数:{{cardstatistics.memberCardCount?cardstatistics.memberCardCount:0}}张</text>
+			</view>
+		</view>
+
+		<view class="phoneFidWrap">
+			<view class="phoneFid">
+				<input class="phoneFid_inp" placeholder="请输入手机号查找" placeholder-style="color:#B5B5B5;" bindblur="telephoneFun" maxlength="11" value="{{telephone}}">
+				</input>
+				<view class="phoneFid_icon" bindtap="formSubmit">
+					<icon class="iconfont icon-fangdajing"></icon>
+				</view>
+			</view>
+			<view class="addition" bindtap="additionFun">增加会员</view>
+		</view>
+		<block wx:if="{{isFang}}">
+			<view class="memberList">
+				<!-- <view class="memberTab">
+        <view class="tab">
+          <view class="tab_text" bindtap="cardTimer">按办卡时间</view>
+          <icon class="iconfont icon-arrow-left"></icon>
+        </view>
+        <view class="tab" bindtap="cardJoinTime">
+          <view class="tab_text">按消费时间</view>
+          <icon class="iconfont icon-arrow-left"></icon>
+        </view>
+        <view class="tab" bindtap="cards">
+          <view class="tab_text">按卡数</view>
+          <icon class="iconfont icon-arrow-left"></icon>
+        </view>
+      </view> -->
+				<view class="memberList_content">
+					<view class="member_item {{index % 2 == 0?'categ1':'categ'}}" wx:for="{{memberList}}" wx:key="id">
+						<view class="item_left">
+							<view class="itemName">{{item.accountName}}</view>
+							<view class="itemPhone">{{item.telephone}}</view>
+							<view class="itemConsumption">最近消费时间：{{item.tradeLastTime}}</view>
+						</view>
+						<view class="item_right">
+							<view class="itemJoin">加入时间：{{item.createdTime}}</view>
+							<view class="itemCards">会员卡数：
+								<text data-accountId="{{item.accountId}}" data-telephone="{{item.telephone}}" bindtap="merchantCard" style="color: rgb(76, 67, 160);">{{item.cardCount}}张</text> </view>
+						</view>
+					</view>
+				</view>
+			</view>
+		</block>
+		<view class="boxWrap" wx:else>
+			<view class="box">
+				<icon class="iconfont icon-icon_wuxiaoxi-"></icon>
+				<view>亲亲，暂无会员稍后再来吧~</view>
+			</view>
+		</view>
+	</view>
+</view>

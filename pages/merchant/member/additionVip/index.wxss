@@ -1,0 +1,46 @@
+/* pages/merchant/member/additionVip/index.wxss */
+page{
+  width: 100%;
+  background-color: #f2f2f2;
+}
+.additionVipWrap{
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.additionVip{
+  width: 95%;
+}
+.inp{
+  width: 100%;
+  height: 80rpx;
+  line-height: 80rpx;
+  box-sizing: border-box;
+  padding-left: 20rpx;
+  background-color: #fff;
+  font-size: 32rpx;
+  color: #bbb;
+  margin: 30rpx 0;
+}
+.selectCard{
+  display: inline-block;
+  height: 70rpx;
+  line-height: 70rpx;
+  text-align: center;
+  font-size: 32rpx;
+  background-color: #FBE931;
+  border-radius: 15rpx;
+  padding: 0 30rpx; 
+}
+.btn{
+  width: 280rpx;
+  height: 70rpx;
+  line-height: 70rpx;
+  text-align: center;
+  font-size: 32rpx;
+  background-color: #F22F2F;
+  color: #fff;
+  border-radius: 15rpx;
+  margin-top: 50rpx;
+}

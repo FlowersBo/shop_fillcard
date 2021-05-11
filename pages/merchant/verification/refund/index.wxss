@@ -1,0 +1,178 @@
+/* pages/merchant/verification/refund/index.wxss */
+page{
+  width: 100%;
+  background-color: #F2F2F2;
+}
+.verificationWrap{
+  width: 100%;
+}
+.verification{
+  width: 100%;
+}
+.refundList{
+  width: 100%;
+  margin-bottom: 15rpx;
+  background-color: #fff;
+}
+.refundDetail{
+  width: 100%;
+  display: flex;
+  align-items: center;
+  box-sizing: border-box;
+  padding: 15rpx;
+}
+.refund_img{
+  width: 300rpx;
+  height: 300rpx;
+  border-radius: 4rpx;
+}
+.refund_img image{
+  width: 100%;
+  height: 100%;
+}
+.refund_content{
+  flex: 1;
+  min-width: 0;
+  box-sizing: border-box;
+  padding-left: 10rpx;
+  margin: 20rpx 0;
+}
+.content{
+  font-size: 28rpx;
+  margin-bottom: 15rpx;
+}
+.content-text{
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  word-break: break-all;
+}
+.content-text:first-child{
+  font-size: 32rpx;
+  font-weight: 600;
+}
+.refundBtn{
+  width: 100%;
+  height: 100rpx;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  box-sizing: border-box;
+  padding: 0  20rpx;
+  border-top: 1rpx solid #D7D7D7;
+}
+.btn{
+  width: 28%;
+  height: 60rpx;
+  border: 1rpx solid #D7D7D7;
+  border-radius: 15rpx;
+  text-align: center;
+  line-height: 60rpx;
+  font-size: 32rpx;
+}
+
+/*mask*/
+.drawer_screen {
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 1000;
+  background: #000;
+  opacity: 0.7;
+  overflow: hidden;
+}
+/*content*/
+.drawer_box {
+  width: 700rpx;
+  overflow: hidden;
+  position: fixed;
+  top: 50%;
+  left: 0;
+  z-index: 1001;
+  background: #FAFAFA;
+  margin: -300rpx 25rpx 25rpx;
+  border-radius: 10rpx;
+  box-sizing: border-box;
+}
+.drawer_title{
+  padding:10rpx 0;
+  background-color: #FDE60C;
+  font: 40rpx "microsoft yahei";
+  text-align: center;
+  border-bottom: 1rpx solid #ddd;
+}
+.drawer_content {
+  /* height: 200rpx; */
+  padding: 40rpx 15rpx;
+  overflow-y: scroll; /*超出父盒子高度可滚动*/
+  line-height: 1.5;
+  font-size: 32rpx;
+}
+.pirc_text:last-child{
+  color: #3CC51F;
+}
+.btnWrap{
+  display: flex;
+  justify-content: space-between;
+}
+.btn_ok{
+  font: 40rpx "microsoft yahei";
+  text-align: center;
+  border-top: 2rpx solid #E8E8EA;
+  color: #3CC51F;
+}
+.btn_ok:last-child{
+  width: 49.5%;
+  height: 80rpx;
+  line-height: 80rpx;
+  color: #FF181F;
+  border-left: 2rpx solid #E8E8EA;
+}
+.btn_ok:first-child{
+  flex: 1;
+  height: 80rpx;
+  line-height: 80rpx;
+}
+.top{
+  padding-top:16rpx;
+}
+.bottom {
+  padding-bottom:16rpx;
+}
+.title {
+  height: 60rpx;
+  line-height: 60rpx;
+  width: 160rpx;
+  text-align: center;
+  display: inline-block;
+  font: 300 28rpx/60rpx "microsoft yahei";
+}
+.input_base {
+  border: 2rpx solid #ccc;
+  padding-left: 10rpx;
+  margin-right: 50rpx;
+}
+.input_h30{
+  height: 60rpx;
+  line-height: 60rpx;
+}
+.input_h60{
+  height: 180rpx;
+}
+.input_view{
+  font: 24rpx "microsoft yahei";
+  background: #fff;
+  color:#000;
+  line-height: 60rpx;
+}
+
+radio{
+  margin-right: 40rpx;
+}
+.grid { display: -webkit-box; display: box; }
+.col-0 {-webkit-box-flex:0;box-flex:0;}
+.col-1 {-webkit-box-flex:1;box-flex:1;}
+.fl { float: left;}
+.fr { float: right;}

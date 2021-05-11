@@ -1,0 +1,19 @@
+<!--pages/cs/index.wxml-->
+<!--scan.wxml-->
+<view class="scan-view">
+  <view class="scanTitle">对准二维码到框内即可扫描</view>
+	<view class='scan-border'>
+		<camera class='scan-camera' mode="scanCode" flash="off" binderror="cameraError" bindscancode='scancode' frame-size='large'>
+			<cover-image class='cover-corner cover-left-top' src='/resource/img/left-top.png'></cover-image>
+			<cover-image class='cover-corner cover-right-top' src='/resource/img/right-top.png'></cover-image>
+			<cover-image class='cover-corner cover-left-bottom' src='/resource/img/left-bottom.png'></cover-image>
+			<cover-image class='cover-corner cover-right-bottom' src='/resource/img/right-bottom.png'></cover-image>
+			<cover-view class='scan-animation' animation="{{animation}}"></cover-view>
+		</camera>
+	</view>
+   <view class="scan-manual">
+      <icon class="iconfont icon-ico"></icon>
+      <view class="manualTexe">扫码没反应？试试手动输入</view>
+      <view class="manualBtn">确定</view>
+    </view>
+</view>

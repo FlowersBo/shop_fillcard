@@ -1,0 +1,37 @@
+<!--pages/merchant/photoAlbum/index.wxml-->
+<view class="galleryWrap">
+	<view class="gallery">
+    <view class="addIconWrap">
+  		<view class='addIcon' bindtap="chooseImage">添加图片</view>
+    </view>
+		<view class="itemWrap">
+			<view class="item" style="width:{{screenWidth/3}}px;" wx:for="{{uploadPics}}" wx:key="index">
+				<image style="height:{{screenWidth/3/1.4}}px;" src="{{item.photoUrl}}" data-src="{{item.photoUrl}}" bindtap="previewImage" mode="aspectFill" />
+				<view class="itemBtn">
+					<view class="btn" bindtap="photoUpdateFn" data-index="{{index}}" data-photoid="{{item.photoId}}">
+						<view class="btnText">置顶</view>
+						<icon class="iconfont icons icon-zhiding1"></icon>
+					</view>
+					<view class="btn" bindtap="deleteFn" data-index="{{index}}"  data-photoid="{{item.photoId}}">
+						<view class="btnText">删除</view>
+						<icon class="iconfont icons icon-chushaixuanxiang"></icon>
+					</view>
+				</view>
+				<!-- 删除按钮 -->
+				<!-- <view class="delete" bindtap="delete" data-index="{{index}}">X</view> -->
+			</view>
+		</view>
+
+	</view>
+</view>
+
+
+
+
+
+
+
+
+
+
+<!-- <button type="primary" bindtap="submit">提交</button> -->

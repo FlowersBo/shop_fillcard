@@ -1,0 +1,42 @@
+<!--pages/index/index.wxml-->
+<view class="custom flex_center" style="padding-top:{{statusBarHeight}}px;background-color:#FDE60C;">
+  <!-- <icon class="iconfont header-iconfont iconwode" bindtap='user'></icon>
+  <text class='header-center'>目的地充电</text> -->
+</view>
+<view class="shopFillcardWrap">
+  <view class="shopFillcard">
+    <view class="logoWrap">
+      <view class="logo">
+        <view class="logo_img">
+          <image src="/resource/img/LOGO.png"></image>
+        </view>
+        <!-- <view class="logo_text">商家版</view> -->
+      </view>
+    </view>
+
+    <form bindsubmit="formSubmit">
+      <view class="shopFromWrap">
+        <view class="shopFrom">
+          <view class="inpWrap">
+            <view class="inpitem">
+              <icon class="iconfont ico icon-zhanghao"></icon>
+              <input name="account" type="number" maxlength="11" placeholder="请输入商家账号" class="inp"></input>
+            </view>
+            <view class="inpitem">
+              <icon class="iconfont ico icon-mima"></icon>
+              <input name="password" password="true" placeholder="请输入商家密码" class="inp"></input>
+            </view>
+          </view>
+          <view class="verificationCode">
+            <input name="verificationCode" type="number" placeholder="请输入验证码" class="verificationCode_inp"></input>
+            <view class="verificationCode_box" bindtap="verificationCodeFun">
+              <image class="img" src="{{code}}"></image>
+            </view>
+          </view>
+          <view class="findPassword" bindtap="findPassword">找回密码</view>
+          <button class="register_btn"  formType="submit">登录</button>
+        </view>
+      </view>
+    </form>
+  </view>
+</view>

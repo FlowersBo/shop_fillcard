@@ -1,0 +1,96 @@
+/* pages/cs/index.wxss */
+page{
+  background-color: #4A4945;
+}
+.scan-view {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+}
+.scanTitle{
+  font-size: 28rpx;
+  color: #fff;
+  margin: 30rpx 0;
+}
+.scan-border {
+  width: 94%;
+  height: 94%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+ 
+.scan-camera {
+  width: 500rpx;
+  height: 500rpx;
+  border-radius: 6rpx;
+  margin: 20rpx;
+}
+ 
+.cover-corner {
+  width: 80rpx;
+  height: 80rpx;
+  position: absolute;
+}
+ 
+.cover-left-top {
+  left: 0;
+  top: 0;
+}
+ 
+.cover-right-top {
+  right: 0;
+  top: 0;
+}
+ 
+.cover-left-bottom {
+  left: 0;
+  bottom: 0;
+}
+ 
+.cover-right-bottom {
+  right: 0;
+  bottom: 0;
+}
+ 
+.scan-animation {
+  position: absolute;
+  top: 10rpx;
+  left: 10rpx;
+  width: 480rpx;
+  height: 8rpx;
+  background-color: #08FDFE;
+  border-radius: 50%;
+}
+.scan-manual{
+  width: 100%;
+  height: 150rpx;
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  background-color: #fefefe;
+  display: flex;
+  align-items: center;
+  box-sizing: border-box;
+  padding: 0 30rpx;
+  font-size: 32rpx;
+  color: #bbb;
+}
+.icon-ico{
+  font-size: 40rpx;
+  color: #4A4945;
+  margin-bottom: 6rpx;
+  margin-right: 30rpx;
+}
+.manualBtn{
+  margin-left: auto;
+  width: 150rpx;
+  height: 70rpx;
+  line-height: 70rpx;
+  border-radius: 10rpx;
+  background-color: #DD0011;
+  color: #fff;
+  text-align: center;
+}

@@ -1,0 +1,105 @@
+/* pages/index/index.wxss */
+page{
+  width: 100%;
+  height: 100%;
+  background-color: #f2f2f2;
+}
+.shopFillcardWrap{
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: fixed;
+  top: 20%;
+}
+.shopFillcard{
+  width: 96%;
+}
+
+.shopFromWrap{
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.shopFrom{
+  width: 92%;
+}
+.inpWrap{
+  width: 100%;
+  height: 70rpx;
+  background-color: #fff;
+  border-radius: 20rpx;
+  box-shadow: 4rpx 4rpx 5px #888888;
+}
+.last_inpWrap{
+  margin-top: 30rpx;
+}
+.inpitem{
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  box-sizing: border-box;
+  padding: 0 20rpx;
+}
+.ico{
+  font-size: 36rpx;
+  color: #ABAEB9;
+  margin-bottom: 10rpx;
+}
+.inp{
+  width: 90%;
+  height: 100%;
+  box-sizing: border-box;
+  padding-left: 20rpx;
+  font-size: 32rpx;
+}
+.inp:first-child{
+  border-bottom: 1rpx solid #ccc;
+}
+.verificationCode{
+  width: 100%;
+  height: 70rpx;
+  display: flex;
+  justify-content: space-between;
+  margin: 30rpx 0;
+}
+.verificationCode_inp{
+  width: 60%;
+  height: 100%;
+  border-radius: 20rpx;
+  background-color: #fff;
+  text-indent: 10rpx;
+  box-sizing: border-box;
+  padding-left: 20rpx;
+  box-shadow: 4rpx 4rpx 5px #888888;
+  font-size: 32rpx;
+}
+.verificationCode_box{
+  width: 30%;
+  background-color: #fff;
+  box-shadow: 4rpx 4rpx 5px #888888;
+}
+.img{
+  width: 100%;
+  height: 100%;
+}
+.verification{
+  width: 30%;
+  line-height: 70rpx;
+  box-shadow: 4rpx 4rpx 5px #888888;
+  background-color: #FDE50D;
+  text-align: center;
+  font-size: 28rpx;
+  margin-right: 0;
+}
+.register_btn{
+  width: 100%;
+  height: 70rpx;
+  line-height: 70rpx;
+  text-align: center;
+  font-size: 44rpx;
+  margin-top: 60rpx;
+  background-color: #FCD943;
+}

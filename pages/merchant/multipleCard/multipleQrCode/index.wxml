@@ -1,0 +1,6 @@
+<!--pages/merchant/multipleCard/multipleQrCode/index.wxml-->
+<view class="multipleQrCodeWrap">
+  <view class="multipleQrCode">
+    <image bindtap="imgYu" data-src="{{mpCode}}" src="{{mpCode}}"></image>
+  </view>
+</view>

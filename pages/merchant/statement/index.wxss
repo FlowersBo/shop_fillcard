@@ -1,0 +1,168 @@
+/* pages/index/merchant/statement/index.wxss */
+page{
+  width: 100%;
+  background-color: #F2F2F2;
+}
+.statementWrap{
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.statement{
+  width: 96%;
+}
+.findYear{
+  width: 100%;
+  height: 220rpx;
+  margin-top: 30rpx;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  justify-content: space-between;
+}
+.findYear_inp{
+  width: 100%;
+  height: 150rpx;
+  background-color: #fff;
+  box-shadow: 4rpx 4rpx 10rpx #909090;
+  border-radius: 20rpx;
+}
+
+.section{
+  width: 100%;
+  height: 49%;
+  line-height: 75rpx;
+  box-sizing: border-box;
+  padding-left: 50rpx;
+  font-size: 32rpx;
+  color: #ADADAD;
+}
+.section:first-child{
+  border-bottom: 1rpx solid #ddd;
+}
+.btnWrap{
+  display: flex;
+  align-items: center;
+}
+.findYear_btn{
+  flex: 1;
+  text-align: right;
+  width: 120rpx;
+  height: 50rpx;
+  line-height: 50rpx;
+  background-color: #FE0000;
+  color: #fafafa;
+  font-size: 28rpx;
+  border-radius: 20rpx;
+}
+.informationWrap{
+  width: 100%;
+  margin: 35rpx 0;
+  background-color: #fff;
+  border-radius: 10rpx;
+  box-shadow: 4rpx 4rpx 15rpx #909090;
+}
+.information{
+  width: 100%;
+  height: 110rpx;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  padding: 4rpx 0;
+}
+.information:first-child{
+  border-bottom: 1rpx solid #d1d1d1;
+}
+.information_sales{
+  width: 30%;
+  height: 80%;
+  text-align: center;
+  font-size: 28rpx;
+  font-weight: bold;
+}
+.amount{
+  font-size: 24rpx;
+  margin-top: 10rpx;
+}
+.memberList{
+  width: 100%;
+  background-color: #fff;
+  border-radius: 20rpx;
+  padding-bottom: 20rpx;
+}
+.memberTab{
+  width: 100%;
+  height: 70rpx;
+  border-bottom: 1rpx solid #ddd;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+.tab{
+  width: 30%;
+  height: 70rpx;
+  display: flex;
+  font-size: 28rpx;
+  justify-content: center;
+  line-height: 70rpx;
+  color: rgb(143, 143, 143);
+}
+.icon-arrow-left{
+  font-size: 40rpx;
+}
+.memberList_content{
+  width: 100%;
+  padding: 10rpx 0;
+}
+.categ{
+}
+.categ1{
+  background-color: rgb(247, 245, 245);	
+}
+.member_item{
+  width: 100%;
+  height: 150rpx;
+  display: flex;
+  justify-content: space-between;
+  box-sizing: border-box;
+  padding: 0 10rpx;
+}
+.itemName{
+  font-size: 32rpx;
+  padding: 8rpx 0;
+}
+.itemPhone{
+  font-size: 28rpx;
+  padding: 8rpx 0;
+}
+.item_right{
+  text-align: right;
+}
+.itemJoin{
+  font-size: 24rpx;
+  padding: 8rpx 0;
+}
+.itemCards{
+  font-size: 24rpx;
+  padding: 8rpx 0;
+}
+/* 无 */
+.boxWrap{
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.box{
+  height: 500rpx;
+  margin-top: 30%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  color: #757575;
+}
+.icon-icon_wuxiaoxi-{
+  font-size: 400rpx;
+}

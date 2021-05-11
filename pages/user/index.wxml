@@ -1,0 +1,37 @@
+<!--pages/user/index.wxml-->
+<view class="container">
+  <!-- <view class="header">
+    <view class="pic">
+      <image class='pic-img' src="{{userInfo.avatarUrl?userInfo.avatarUrl:'/resource/img/user_img.png'}}"></image>
+      <view class='pic-name'>{{userInfo.nickName?userInfo.nickName:''}}</view>
+    </view>
+  </view> -->
+
+  <view class="list">
+    <view class="item" bindtap="order">
+      <icon class="iconfont icon-icon-test" style='color:#C353F3;font-size:50rpx; margin-right: 20rpx;'></icon>
+      <view class="titlename">商家基本信息</view>
+      <icon class="iconfont iconarrow icon-iconfontxiangxia1copy19"></icon>
+    </view>
+    <view class="item" bindtap="gotoWallet">
+      <icon class="iconfont icon-wallet-copy" style='color:#F66357;font-size:50rpx; margin-right: 20rpx;'></icon>
+      <view class='titlename'>我的钱包</view>
+      <icon class="iconfont iconarrow icon-iconfontxiangxia1copy19"></icon>
+    </view>
+    <view class="item" bindtap="twoDimension">
+      <icon class="iconfont icon-ico" style='color:#3ADDA7;font-size:50rpx; margin-right: 20rpx;'></icon>
+      <view class='titlename'>商家二维码</view>
+      <icon class="iconfont iconarrow icon-iconfontxiangxia1copy19"></icon>
+    </view>
+  </view>
+  <view class="btnsWrap">
+    <button class="btns" bindtap="quitBtn">退出登录</button>
+  </view>
+  <view class="updatePassword" bindtap="findPassword">
+    <view class="iconW">
+      <icon class='icon-genggaimima iconfont'></icon>
+    </view>
+    <text>更改密码</text>
+  </view>
+</view>
+

@@ -1,0 +1,29 @@
+<!--pages/merchant/audit/index.wxml-->
+<view class="auditWrap">
+  <view class="audit">
+    <block wx:if="{{isFang}}">
+      <view class="auditList" wx:for="{{auditList}}" wx:key="id">
+        <view class="item">
+          <view class="audit_item">
+            <view class="shopname">{{item.memberCardName}}</view>
+            <view class="time">剩余{{item.surplusCount}}次</view>
+          </view>
+          <view class="audit_item">
+            <view>{{item.accountName}}</view>
+            <view>{{item.telephone}}</view>
+          </view>
+          <!-- <view class="item_btn">
+            <button class="btn" data-memberCardId="{{item.memberCardId}}" bindtap="refuseFun">拒绝转让</button>
+            <button class="btn" data-memberCardId="{{item.memberCardId}}" bindtap="permitFun">允许转让</button>
+          </view> -->
+        </view>
+      </view>
+    </block>
+    <view class="boxWrap" wx:else>
+      <view class="box">
+        <icon class="iconfont icon-icon_wuxiaoxi-"></icon>
+        <view>亲亲，暂无审核会员卡稍后再来吧~</view>
+      </view>
+    </view>
+  </view>
+</view>

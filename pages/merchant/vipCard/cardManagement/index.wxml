@@ -1,0 +1,76 @@
+<!--pages/index/merchant/vipCard/cardManagement/index.wxml-->
+<view class="cardManagementWrap">
+  <view class="cardManagement">
+    <view class="cardName">{{productName}}</view>
+    <view class="information">
+      <view class="information_sales">
+        <view class="sales">总销量</view>
+        <view class="amount">{{statistics.saleCountDirect}}张</view>
+      </view>
+      <view wx:if="{{cardType=='0'}}" class="information_sales">
+        <view class="sales">剩余总次数</view>
+        <view class="amount">{{statistics.surplusCount}}次</view>
+      </view>
+      <view wx:else class="information_sales">
+        <view class="sales">剩余总金额</view>
+        <view class="amount">{{statistics.surplusAmount}}元</view>
+      </view>
+      <!-- <view class="information_sales">
+        <view class="sales">剩余总估价</view>
+        <view class="amount">0元</view>
+      </view> -->
+    </view>
+    <view class="phoneFid">
+      <input class="phoneFid_inp" placeholder="请输入手机号查找" placeholder-style="color:#B5B5B5;" bindblur="telephoneFun" value="{{telephone}}" maxlength="11">
+      </input>
+      <view class="phoneFid_icon" bindtap="formSubmit">
+        <icon class="iconfont icon-fangdajing"></icon>
+      </view>
+    </view>
+    <block wx:if="{{isFang}}">
+      <view class="memberList">
+        <!-- <view class="memberTab">
+        <view class="tab" bindtap="cardTimer">
+          <view class="tab_text">按办卡时间</view>
+          <icon class="iconfont icon-arrow-left"></icon>
+        </view>
+        <view class="tab" bindtap="cardJoinTime">
+          <view class="tab_text">按消费时间</view>
+          <icon class="iconfont icon-arrow-left"></icon>
+        </view>
+        <view class="tab" bindtap="cards">
+          <view class="tab_text">按次数</view>
+          <icon class="iconfont icon-arrow-left"></icon>
+        </view>
+      </view> -->
+        <view class="memberList_content">
+          <view class="member_item {{index % 2 == 0?'categ1':'categ'}}" wx:for="{{memberCardList}}" wx:key="id">
+            <view class="item_left">
+              <view class="itemName">{{item.accountName}}</view>
+              <view class="itemPhone">{{item.telephone}}</view>
+              <view class="itemConsumption" wx:if="{{item.lastTradeTime}}">最近消费时间：{{item.lastTradeTime}}</view>
+            </view>
+            <view class="item_right">
+              <view class="itemJoin">办卡时间：{{item.createdTime}}</view>
+              <view wx:if="{{cardType=='0'}}" class="itemCardsWrap">
+                <view class="itemCards">剩余{{item.surplusCount}}次</view>
+                <view class="appraisement">估值{{item.valuation}}元</view>
+              </view>
+              <view wx:else class="itemCardsWrap">
+                <!-- <view class="itemCards">剩余{{item.surplusCount}}次</view> -->
+                <view class="appraisement">剩余储值{{item.surplusAmount}}元</view>
+              </view>
+              <view class="state" wx:if="{{item.statusDesc}}">{{item.statusDesc}}</view>
+            </view>
+          </view>
+        </view>
+      </view>
+    </block>
+    <view class="boxWrap" wx:else>
+      <view class="box">
+        <icon class="iconfont icon-icon_wuxiaoxi-"></icon>
+        <view>亲亲，暂无会员卡稍后再来吧~</view>
+      </view>
+    </view>
+  </view>
+</view>

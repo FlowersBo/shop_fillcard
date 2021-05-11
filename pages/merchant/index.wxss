@@ -1,0 +1,73 @@
+/* pages/index/merchant/index.wxss */
+page{
+  width: 100%;
+  background-color: #F2F2F2;
+}
+.merchantWrap{
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.merchant{
+  width: 95%;
+}
+.merchant_img{
+  width: 100%;
+  height: 300rpx;
+}
+.slide-image{
+  width: 100%;
+  height: 100%;
+}
+.shopName{
+  width: 100%;
+  height: 80rpx;
+  line-height: 80rpx;
+  text-align: center;
+  font-size: 40rpx;
+}
+.shopContent{
+  width: 100%;
+  box-sizing: border-box;
+  padding: 15rpx;
+  border: 1rpx solid #ddd;
+  border-radius: 30rpx;
+  overflow: hidden;
+  background-color: #fff;
+}
+.shopContentBox{
+  float: left;
+  width: 30%;
+  height: 160rpx;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+  text-align: center;
+  font-size: 40rpx;
+  /* border: 1rpx solid rgb(17, 17, 17); */
+  margin: 15rpx 10rpx;
+  /* background-color: #F9DD62; */
+}
+.merchantImg{
+  width: 80rpx;
+  height: 80rpx;
+}
+.merchantImg image{
+  width: 100%;
+  height: 100%;
+}
+.shopContentBox_text{
+  font-size: 28rpx; 
+}
+.icons{
+  font-size: 100rpx;
+  color: #C3C3C3;
+}
+.icon{
+  font-size: 80rpx;
+}
+.icon-baobiao1{
+  font-size: 84rpx;
+}

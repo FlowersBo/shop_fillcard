@@ -1,0 +1,86 @@
+<!--pages/merchant/statistics/index.wxml-->
+<view class="statementWrap">
+	<view class="statement">
+		<view class="informationWrap">
+			<view class="information">
+				<view class="information_sales">
+					<view class="sales">今日售卖</view>
+					<view class="amount">{{statistics.tradeAmountToday?statistics.tradeAmountToday:0}}元</view>
+				</view>
+				<view class="information_sales">
+					<view class="sales">今日总售卡数</view>
+					<view class="amount">{{statistics.tradeCountToday?statistics.tradeCountToday:0}}张</view>
+				</view>
+				<view class="information_sales">
+					<view class="sales">累计售卖</view>
+					<view class="amount">{{statistics.tradeAmountTotal?statistics.tradeAmountTotal:0}}元</view>
+				</view>
+			</view>
+		</view>
+
+		<form bindsubmit="formSubmit">
+			<view class="findYear">
+				<view class="findYear_inp">
+					<view class="section">
+						<picker name="startTime" mode="date" fields="day" value="{{time}}" start="2015-01-01" end="2023-12-31" bindchange="bindTimeChange">
+							{{startTime?startTime:'请选择开始时间'}}
+						</picker>
+					</view>
+					<view class="section">
+						<picker name="endTime" mode="date" fields="day" value="{{time}}" start="2015-01-01" end="2023-12-31" bindchange="bindTimeChange1">
+							{{endTime?endTime:'请选择结束时间'}}
+						</picker>
+					</view>
+				</view>
+				<view class="btnWrap">
+					<button formType="submit" class="findYear_btn">查找</button>
+				</view>
+			</view>
+		</form>
+
+		<block wx:if="{{isFang}}">
+			<view class="memberList">
+				<!-- <view class="memberTab">
+        <view class="tab">
+          <view class="tab_text">按办卡时间</view>
+          <icon class="iconfont icon-arrow-left"></icon>
+        </view>
+        <view class="tab" bindtap="cardJoinTime">
+          <view class="tab_text">按消费时间</view>
+          <icon class="iconfont icon-arrow-left"></icon>
+        </view>
+        <view class="tab" bindtap="cards">
+          <view class="tab_text">按次数</view>
+          <icon class="iconfont icon-arrow-left"></icon>
+        </view>
+      </view> -->
+				<view class="memberList_content">
+					<!-- bindtap="cardAdmin" -->
+					<view class="member_item {{index % 2 == 0?'categ1':'categ'}}" wx:for="{{memberList}}" wx:key="id">
+						<view class="item">
+							<view class="itemName">{{item.productName}}</view>
+							<view class="itemPhone"></view>
+						</view>
+						<view class="item">
+							<view class="itemJoin">今日核销：{{item.writeOffCountToday}}次</view>
+						</view>
+						<view class="item">
+							<view class="itemJoin">售卖张数：{{item.count}}张</view>
+							<view class="itemCards">售卖金额：{{item.amountTotal}}元</view>
+						</view>
+						<view class="item">
+							<view class="itemJoin">已核销：{{item.writeOffCount}}次</view>
+							<view class="itemCards">未核销：{{item.surplusCount}}次</view>
+						</view>
+					</view>
+				</view>
+			</view>
+		</block>
+		<view class="boxWrap" wx:else>
+			<view class="box">
+				<icon class="iconfont icon-icon_wuxiaoxi-"></icon>
+				<view>亲亲，暂无报表记录稍后再来吧~</view>
+			</view>
+		</view>
+	</view>
+</view>

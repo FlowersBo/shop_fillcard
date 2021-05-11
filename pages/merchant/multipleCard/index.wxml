@@ -1,0 +1,43 @@
+<!--pages/merchant/multipleCard/index.wxml-->
+<view class="multipleCardWrap">
+  <view class="multipleCard">
+    <block wx:if="{{count=='0'}}">
+      <view class="multipleCardDetail">
+        <view class="img">
+          <image src="{{multipleCard.pic?multipleCard.pic:'https://file.bnzbj.com/common/product_multipleStore_default.jpg'}}"></image>
+        </view>
+        <view class="multiple">{{multipleCard.productName}}</view>
+        <view class="timer">
+          <view class="validity">{{multipleCard.validityNumDesc}}</view>
+          <view class="effectiveTime"><text>生效时间：</text>{{multipleCard.useLimitHour}}小时</view>
+        </view>
+        <view class="btnWrap">
+          <view class="btn" bindtap="multipleQrCode">二维码</view>
+          <!-- <view class="btn" bindtap="putawayState">{{btnText}}</view> -->
+
+          <view class=" {{_num == 0?'switch':'switchNav'}}" >
+            <view class="switchNums {{_num == 0?'currentNum':''}}"  bindtap="switchChange" data-index="{{multipleCard.status}}">{{selectOpen[0]}}</view>
+            <view class="switchNums {{_num == 1?'nav':''}}"  bindtap="switchChange" data-index="{{multipleCard.status}}">{{selectOpen[1]}}</view>
+          </view>
+
+          <view class="btn" bindtap="amendMultipleCard">修改</view>
+        </view>
+      </view>
+    </block>
+    <view wx:else class="bigBtnWrap">
+      <navigator class="bigBtn" url="amendMultipleCard/index">添加多倍储值卡</navigator>
+    </view>
+    <view class="explain">
+      <view class="title">1、使用场景</view>
+      <view class="illustrate">举例说明：</view>
+      <view class="content">顾客在本店消费100元，让顾客充值300元，则本次消费的100元免掉，顾客的卡里有300元，下次顾客来消费直接用卡里300元支付即可。</view>
+      <view class="title">2、“储值倍数”是什么意思?</view>
+      <view class="content">“储值倍数”指的是顾客消费金额*倍数，顾客充值这么多钱就能享受本次
+消费金额免除。</view>
+      <view class="title">3、“生效时间”是什么意思?</view>
+      <view class="content">指的是顾客购买了多倍储值卡多长时间之后，才能使用。</view>
+      <view class="title">4、有效期”是什么意思?</view>
+      <view class="content">指的是顾客购买了多倍储值卡，在多长时间内消费是有效的，超过了这个时间，则不能消费。</view>
+    </view>
+  </view>
+</view>

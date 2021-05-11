@@ -1,0 +1,28 @@
+<!--pages/merchant/meWellat/withdrawRecord/index.wxml-->
+<view class="withdrawRecordWrap">
+  <view class="withdrawRecord">
+    <block wx:if="{{isFang}}">
+      <view class="particularsWrap">
+        <view class="particulars">
+          <view class="particularsItem" wx:for="{{consume}}" wx:key="id">
+            <view class="item_left">
+              <view class="itemWrap">
+                <view class="item_start">{{item.createdTime}}</view>
+                <view class="item_timer">{{item.statusDesc}}</view>
+              </view>
+              <!-- <view class="item_details">{{item.statusDesc}}</view> -->
+            </view>
+            <view class="money">{{item.amount}}元</view>
+          </view>
+        </view>
+      </view>
+    </block>
+
+    <view class="boxWrap" wx:else>
+      <view class="box">
+        <icon class="iconfont icon-icon_wuxiaoxi-"></icon>
+        <view>亲亲，暂无提现明细稍后再来吧~</view>
+      </view>
+    </view>
+  </view>
+</view>

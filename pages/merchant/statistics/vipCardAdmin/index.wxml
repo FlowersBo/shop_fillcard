@@ -1,0 +1,39 @@
+<!--pages/merchant/statistics/vipCardAdmin/index.wxml-->
+<view class="merchantWrap">
+	<view class="merchant">
+
+		<view class="phoneFidWrap">
+			<view class="phoneFid">
+				<input class="phoneFid_inp" placeholder="请输入手机号查找" placeholder-style="color:#B5B5B5;" bindblur="telephoneFun" maxlength="11" value="{{telephone}}">
+				</input>
+				<view class="phoneFid_icon" bindtap="formSubmit">
+					<icon class="iconfont icon-fangdajing"></icon>
+				</view>
+			</view>
+		</view>
+		<!-- wx:if="{{isFang}}" -->
+		<block>
+			<view class="memberList">
+				<view class="memberList_content">
+					<view class="member_item {{index % 2 == 0?'categ1':'categ'}}" wx:for="{{4}}" wx:key="id">
+						<view class="item_left">
+							<view class="itemName">{{item.accountName}}桓玄的</view>
+							<view class="itemPhone">{{item.telephone}}16666666666</view>
+							<view class="itemConsumption">最近消费时间：{{item.tradeLastTime}}2020-12-22</view>
+						</view>
+						<view class="item_right">
+							<view class="itemJoin">办卡时间：{{item.createdTime}}2020-12-12</view>
+							<view class="itemCards">剩余10次</view>
+						</view>
+					</view>
+				</view>
+			</view>
+		</block>
+		<!-- <view class="boxWrap" wx:else>
+			<view class="box">
+				<icon class="iconfont icon-icon_wuxiaoxi-"></icon>
+				<view>亲亲，暂无会员稍后再来吧~</view>
+			</view>
+		</view> -->
+	</view>
+</view>

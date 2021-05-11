@@ -1,0 +1,72 @@
+/* pages/merchant/verificationQRcode/index.wxss */
+/* pages/index/merchant/verification/index.wxss */
+page{
+  width: 100%;
+  background-color: #F2F2F2;
+}
+.verificationWrap{
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.verification{
+  width: 96%;
+}
+.cardsWrap{
+  width: 100%;
+  background-color: #fff;
+  border-radius: 20rpx;
+  margin-top: 30rpx;
+  box-sizing: border-box;
+  padding: 80rpx 20rpx;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  box-shadow: 5rpx 4rpx 6rpx #909090;
+}  
+.cards_name{
+  width: 100%;
+  text-align: center;
+  padding: 10rpx 0;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  word-break: break-all;
+  font-size: 40rpx;
+  font-weight: bold;
+}
+.cards_content{
+  font-size: 32rpx;
+  overflow:hidden;
+  text-overflow:ellipsis;
+  display: -webkit-box;
+  -webkit-box-orient:vertical;
+  -webkit-line-clamp:2;
+  line-height: 1.5;
+}
+.btnWrap{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  box-sizing: border-box;
+  padding: 0 25rpx;
+  margin-top: 30rpx;
+}
+.btn{
+  width: 220rpx;
+  height: 70rpx;
+  line-height: 70rpx;
+  text-align: center;
+  background-color: #FCE50C;
+  color: #200;
+  font-size: 32rpx;
+  border-radius: 10rpx;
+}
+button::after{
+  border: none;
+}
+
+.btn1{
+  background-color: #DCDCDC;
+}

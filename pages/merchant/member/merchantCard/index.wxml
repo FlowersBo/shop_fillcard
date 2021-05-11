@@ -1,0 +1,33 @@
+<!--pages/index/merchant/member/merchantCard/index.wxml-->
+<!--pages/user/meVipcard/index.wxml-->
+<view class="meVipcardWrap">
+  <view class="meVipcard">
+    <block wx:if="{{isFang}}">
+    <view class="card" wx:for="{{memberList}}" wx:key="id" data-memberCardId="{{item.memberCardId}}"  data-memberCardName="{{item.memberCardName}}" data-cardType="{{item.cardType}}" bindtap="gotocardConsume">
+      <!-- <view class="card_top">朝阳合生汇音乐蛋糕派对</view> -->
+      <view class="card_center">
+        <image class="card_img" src="/resource/img/vipcard.jpg"></image>
+        <view class="card_content">
+          <view class="card_content_top">{{item.memberCardName}}</view>
+          <view wx:if="{{item.cardType=='0'}}" class="card_content_centent">剩余{{item.surplusCount}}次</view>
+          <view wx:else class="card_content_centent">剩余{{item.surplusAmount}}元</view>
+          <view wx:if="{{item.validity}}" class="card_content_bottom">有效期至：{{item.validity}}</view>
+          <view wx:else class="card_content_bottom"></view>
+        </view>
+      </view>
+      <!-- <view class="card_bottom">北京市朝阳区西甲大望路22号5层中庭</view> -->
+      <!-- <view class="iconWrap">
+        <icon class="iconfont icon-iconfontxiangxia1copy19"></icon>
+      </view> -->
+    </view>
+    </block>
+    <view class="boxWrap" wx:else>
+      <view class="box">
+        <icon class="iconfont icon-icon_wuxiaoxi-"></icon>
+        <view>亲亲，该会员暂无会员卡稍后再来吧~</view>
+      </view>
+    </view>
+  </view>
+</view>
+
+

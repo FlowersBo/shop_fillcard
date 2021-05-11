@@ -1,0 +1,48 @@
+<!--pages/index/findPassword/index.wxml-->
+<view class="custom flex_center" style="padding-top:{{statusBarHeight}}px;background-color:#FDE60C;">
+</view>
+<view class="shopFillcardWrap">
+  <view class="shopFillcard">
+    <form bindsubmit="formSubmit">
+      <view class="shopFromWrap">
+        <view class="shopFrom">
+
+          <view class="inpWrap">
+            <view class="inpitem">
+              <icon class="iconfont ico icon-zhanghao"></icon>
+              <input name="account" type="number" maxlength="11" placeholder="请输入商家账号"  bindinput="bindMobile" class="inp"></input>
+            </view>
+          </view>
+
+          <!-- <view class="verificationCode">
+            <input name="verificationCode" type="number" placeholder="请输入验证码" class="verificationCode_inp"></input>
+            <view class="verificationCode_box" bindtap="verificationCodeFun">
+              <image class="img" src="{{code}}"></image>
+            </view>
+          </view> -->
+
+          <view class="verificationCode">
+            <input name="mobileCode" type="number" placeholder="输入手机验证码" maxlength="4" class="verificationCode_inp"  bindinput="bindCode"></input>
+            <button class='verification' bindtap='getVerificationCode' disabled='{{disabled}}'>{{codename}}</button>
+          </view>
+
+          <view class="inpWrap">
+            <view class="inpitem">
+              <icon class="iconfont ico icon-mima"></icon>
+              <input name="newPassword" password="true"  maxlength="11" placeholder="请输入新密码" class="inp"></input>
+            </view>
+          </view>
+
+          <view class="inpWrap last_inpWrap">
+            <view class="inpitem">
+              <icon class="iconfont ico icon-mima"></icon>
+              <input name="password" password="true"  maxlength="11" placeholder="再次输入密码" class="inp"></input>
+            </view>
+          </view>
+
+          <button class="register_btn" formType="submit">提交</button>
+        </view>
+      </view>
+    </form>
+  </view>
+</view>

@@ -1,0 +1,29 @@
+<!--pages/merchant/member/merchantCard/cardConsume/index.wxml-->
+<view class="useRecordWrap">
+  <view class="useRecord">
+    <block wx:if="{{isFang}}">
+      <view class="recordWrap">
+      <view class="record" wx:for="{{writeOffRecordList}}" wx:key="id">
+        <view class="timerWrap">
+          <view class="cardName">{{memberCardName}}</view>
+          <view class="timer">最近消费时间：{{item.createdTime}}</view>
+        </view>
+        <view wx:if="{{cardType=='0'}}" class="surplusWrap">
+          <view class="frequency">-{{item.writeOffValue}}次</view>
+          <view class="surplus">剩余{{item.surplusValue}}次</view>
+        </view>
+        <view wx:else class="surplusWrap">
+          <view class="frequency">-{{item.writeOffValue}}元</view>
+          <view class="surplus">剩余{{item.surplusValue}}元</view>
+        </view>
+      </view>
+    </view>
+    </block>
+    <view class="boxWrap" wx:else>
+      <view class="box">
+        <icon class="iconfont icon-icon_wuxiaoxi-"></icon>
+        <view>亲亲，该会员卡暂无核销记录稍后再来吧~</view>
+      </view>
+    </view>
+  </view>
+</view>

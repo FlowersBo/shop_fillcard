@@ -1,0 +1,72 @@
+<!--pages/index/merchant/statement/index.wxml-->
+<view class="statementWrap">
+  <view class="statement">
+    <form bindsubmit="formSubmit">
+      <view class="findYear">
+        <view class="findYear_inp">
+          <view class="section">
+            <picker name="startTime" mode="date" fields="day" value="{{time}}" start="2015-01-01" end="2025-12-31" bindchange="bindTimeChange">
+              {{startTime?startTime:'请选择开始时间'}}
+            </picker>
+          </view>
+          <view class="section">
+            <picker name="endTime" mode="date" fields="day" value="{{time}}" start="2015-01-01" end="2025-12-31" bindchange="bindTimeChange1">
+              {{endTime?endTime:'请选择结束时间'}}
+            </picker>
+          </view>
+        </view>
+        <view class="btnWrap">
+          <button formType="submit" class="findYear_btn">查找</button>
+        </view>
+      </view>
+    </form>
+    <view class="informationWrap">
+      <view class="information">
+        <view class="information_sales">
+          <view class="sales">购买次数</view>
+          <view class="amount">{{tradeStat.tradeCount}}次</view>
+        </view>
+        <view class="information_sales">
+          <view class="sales">核销次数</view>
+          <view class="amount">{{tradeStat.writeOffCount}}次</view>
+        </view>
+      </view>
+      <view class="information">
+        <view class="information_sales">
+          <view class="sales">购买金额</view>
+          <view class="amount">{{tradeStat.tradeAmount}}元</view>
+        </view>
+        <view class="information_sales">
+          <view class="sales">核销金额</view>
+          <view class="amount">{{tradeStat.writeOffAmount}}元</view>
+        </view>
+      </view>
+    </view>
+    <block wx:if="{{isFang}}">
+      <view class="memberList">
+        <view class="memberList_content">
+          <view class="member_item" wx:for="{{memberList}}" wx:key="index">
+            <view class="itemWrap">
+              <view class="itemName">{{item.linkUserName}}</view>
+              <view class="itemStart">已核销</view>
+              <!-- {{item.writeOffStatus}} -->
+            </view>
+            <view class="itemWrap">
+              <view class="itemPhone">{{item.linkTelephone}}</view>
+              <view class="itemMoney">{{item.amount}}元</view>
+            </view>
+            <view class="itemWrap">
+              <view class="itemTime">{{item.writeOffTime}}</view>
+            </view>
+          </view>
+        </view>
+      </view>
+    </block>
+    <view wx:else class="boxWrap">
+      <view class="box">
+        <icon class="iconfont icon-icon_wuxiaoxi-"></icon>
+        <view>亲亲，暂无报表记录稍后再来吧~</view>
+      </view>
+    </view>
+  </view>
+</view>
