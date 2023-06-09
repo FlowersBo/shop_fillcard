@@ -35,7 +35,7 @@ Page({
     wx.scanCode({
       success(res) {
         console.log("扫码",res)
-        var path = decodeURIComponent(res.path);
+        var path = decodeURIComponent(res.result);
         // var path = res.path;
         console.log(path)
         // var pathPart1 = path.split('&');
@@ -49,9 +49,8 @@ Page({
               url: '/pages/merchant/verificationQRcode/index?' + path,
             })
           } else{
-            var memberCardId = res.path;
             wx.navigateTo({
-              url: "/pages/merchant/verification/index?memberCardId=" + memberCardId
+              url: "/pages/merchant/verification/index?memberCardId=" + path
             })
           }
         }else {

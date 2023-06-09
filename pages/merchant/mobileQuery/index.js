@@ -33,23 +33,23 @@ Page({
         duration: 2000
       })
     } else {
-      that.memberCardFun(telephone);
+      that.memberCardFun();
     }
   },
 
   //列表
-  memberCardFun(telephone) {
+  memberCardFun() {
     var accountId = that.data.accountId;
     var dataUrl = "/card/memberCardListM";
     var param = {
       page: {
-        size: 10,
+        size: 20,
         current: 1
       },
-      telephone: telephone
+      telephone: that.data.telephone
     };
     wxRequest(dataUrl, param)
-      .then(function(res) {
+      .then(function (res) {
         //业务逻辑
         console.log("会员卡列表", res);
         if (res.code == '0000') {
@@ -67,7 +67,7 @@ Page({
               isFang: false
             });
           }
-        }else{
+        } else {
           wx.showToast({
             title: res.msg,
             icon: 'none',
@@ -75,13 +75,13 @@ Page({
           })
         }
       })
-      .catch(function(res) {
+      .catch(function (res) {
         console.log(res)
       })
   },
 
-   //卡跳转
-   gotocardConsume: function(e) {
+  //卡跳转
+  gotocardConsume: function (e) {
     var memberCardId = e.currentTarget.dataset.membercardid;
     var memberCardName = e.currentTarget.dataset.membercardname;
     var cardType = e.currentTarget.dataset.cardtype;
@@ -126,15 +126,15 @@ Page({
 
   },
 
-   /**
+  /**
    * 页面相关事件处理函数--监听用户下拉动作
    */
-  onPullDownRefresh: function() {
+  onPullDownRefresh: function () {
     console.log("下拉刷新")
     // 显示顶部刷新图标  
     wx.showNavigationBarLoading();
-    if(that.data.telephone){
-      that.memberCardFun(that.data.telephone);
+    if (that.data.telephone) {
+      that.memberCardFun();
     }
     // 停止下拉动作  
     wx.stopPullDownRefresh();
@@ -147,16 +147,17 @@ Page({
   /**
    * 页面上拉触底事件的处理函数
    */
-  onReachBottom: function() {
+  onReachBottom: function () {
     // 页数+1  
     let current = that.data.current;
     current = current + 1;
     var dataUrl = "/card/memberCardListM";
     var param = {
       page: {
-        size: 10,
+        size: 20,
         current: current
       },
+      telephone: that.data.telephone
     };
     console.log("页数", param);
     wxRequest(dataUrl, param).then(res => {
@@ -168,7 +169,7 @@ Page({
         wx.showLoading({
           title: '暂时没有更多了',
         })
-        setTimeout(function() {
+        setTimeout(function () {
           wx.hideLoading()
         }, 500)
       } else {
@@ -188,7 +189,7 @@ Page({
             current: current
           })
           // 隐藏加载框  
-          setTimeout(function() {
+          setTimeout(function () {
             wx.hideLoading()
           }, 500)
         }

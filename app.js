@@ -3,6 +3,7 @@ App({
   data: {
     // siteroot: 'http://123.56.157.206:9000/api',
     // siteroot: 'http://39.96.84.9:9000/api',
+    // siteroot: 'http://lhj.natapp1.cc/api',
     siteroot: 'https://mp.bnzbj.com/api',
   },
   onShow: function(options) {

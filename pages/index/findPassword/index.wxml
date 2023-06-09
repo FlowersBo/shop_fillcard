@@ -1,6 +1,6 @@
 <!--pages/index/findPassword/index.wxml-->
-<view class="custom flex_center" style="padding-top:{{statusBarHeight}}px;background-color:#FDE60C;">
-</view>
+<!-- <view class="custom flex_center" style="padding-top:{{statusBarHeight}}px;background-color:#FDE60C;">
+</view> -->
 <view class="shopFillcardWrap">
   <view class="shopFillcard">
     <form bindsubmit="formSubmit">

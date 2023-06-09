@@ -5,10 +5,15 @@
   position: relative;
 }
 
-.phoneFidwrap{
+.phoneFidWrap{
   width: 100%;
   height: 90rpx;
   background: #fff;
+  position: fixed;
+  top: 0;
+  left: 0;
+  padding-top: 20rpx;
+  z-index: 1;
 }
 
 .phoneFid {
@@ -16,9 +21,7 @@
   height: 80rpx;
   background-color: #EBEBEB;
   border-radius: 40rpx;
-  position: fixed;
-  top: 20rpx;
-  left: 50%;
+  margin-left: 50%;
   transform:translateX(-50%);
   margin-bottom: 20rpx;
 }
