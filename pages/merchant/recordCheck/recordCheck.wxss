@@ -1,0 +1,29 @@
+/* pages/merchant/recordCheck/recordCheck.wxss */
+page {
+  background-color: #f1f1f1;
+}
+
+.recordCheck {
+  padding-bottom: 30rpx;
+}
+
+.recordsList {
+  width: 95%;
+  margin: 20rpx auto;
+  background-color: #fff;
+  border-radius: 20rpx;
+  box-sizing: border-box;
+  padding: 10rpx 20rpx;
+}
+
+.btn {
+  width: 130rpx;
+  height: 50rpx;
+  text-align: center;
+  line-height: 50rpx;
+  background: #F72121;
+  color: #f1f1f1;
+  font-size: 24rpx;
+  border-radius: 10rpx;
+  margin-left: auto;
+}

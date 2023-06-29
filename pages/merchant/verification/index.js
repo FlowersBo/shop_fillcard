@@ -62,6 +62,7 @@ Page({
           }
           that.setData({
             card: records,
+            cardRecordList: res.cardRecordList,
             cardType: res.cardType,
             surplusCount: res.surplusCount,
             surplusAmount: res.surplusAmount

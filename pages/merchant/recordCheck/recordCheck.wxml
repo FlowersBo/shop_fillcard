@@ -1,0 +1,30 @@
+<!--pages/merchant/recordCheck/recordCheck.wxml-->
+<view class="recordCheck">
+  <view class="recordsList" wx:for="{{recordsList}}" wx:key="index">
+    <view style="font-size: 32rpx;font-weight: bold;">
+      {{item.accountName}}
+    </view>
+    <view style="display: flex;align-items: center;justify-content: space-between;margin: 10rpx 0;">
+      <view>
+        {{item.memberCardName}}
+      </view>
+      <view>
+        剩余:
+        <text style="color: #F72121;">{{item.surplusCount}}</text> <text style="font-size: 24rpx;">次</text>
+      </view>
+    </view>
+    <view style="margin: 10rpx 0;">
+      过期时间:
+      {{item.validity}}
+    </view>
+    <view style="display: flex;align-items: center;justify-content: space-between;">
+      <view>
+      手机号：
+      {{item.telephone}}
+    </view>
+    <view class="btn" data-telephone="{{item.telephone}}" catchtap="calling">
+      电话提醒
+    </view>
+    </view>
+  </view>
+</view>

@@ -2,7 +2,6 @@ const app = getApp();
 const siteRoots = app.data.siteroot;
 const wxRequest = (url, data) => {
   let token = wx.getStorageSync('token');
-  console.log("请求里的token", token);
   let version = '1.0';
   data.version = version;
   return new Promise(function (resolve, reject) {

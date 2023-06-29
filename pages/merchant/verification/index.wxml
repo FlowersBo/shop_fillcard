@@ -28,4 +28,19 @@
       </view>
     </block>
   </view>
+  <view class="cardRecordList">
+    <view wx:for="{{cardRecordList}}" wx:key="index" style="border-bottom:2rpx solid #eee;">
+     <view style="display: flex; align-items: center;justify-content: space-between;">
+      <view>
+        {{item.memberCardName}}
+      </view>
+      <view style="font-size: 24rpx;color: #aaa;">
+        {{item.createdTime}}
+      </view>
+     </view>
+      <view style="margin: 10rpx 0; margin-left: auto;width: 300rpx;text-align: right;">
+        {{item.remark}}
+      </view>
+    </view>
+  </view>
 </view>

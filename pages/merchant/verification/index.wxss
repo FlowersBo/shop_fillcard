@@ -84,3 +84,11 @@ button::after{
   border: none;
 }
 
+.cardRecordList{
+  width: 95%;
+  margin: 20rpx auto;
+  background-color: #fff;
+  border-radius: 20rpx;
+  box-sizing: border-box;
+  padding: 20rpx;
+}

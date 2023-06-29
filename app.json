@@ -32,7 +32,8 @@
     "pages/user/orderUser/index",
     "pages/user/twoDimension/index",
     "pages/merchant/vipCard/additionallyCard/index",
-    "pages/merchant/multipleCard/multipleQrCode/index"
+    "pages/merchant/multipleCard/multipleQrCode/index",
+    "pages/merchant/recordCheck/recordCheck"
   ],
   "window": {
     "navigationBarTitleText": "",

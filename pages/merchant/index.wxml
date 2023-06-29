@@ -85,6 +85,12 @@
 				</view>
 				<view class="shopContentBox_text">卡种统计</view>
 			</navigator>
+      <navigator class="shopContentBox" url="/pages/merchant/recordCheck/recordCheck">
+				<view class="merchantImg">
+					<image style="width: 90rpx; height: 90rpx;" src="/resource/img/merchantImg/bg-list.png"></image>
+				</view>
+				<view class="shopContentBox_text">过期提醒</view>
+			</navigator>
 		</view>
 	</view>
 </view>

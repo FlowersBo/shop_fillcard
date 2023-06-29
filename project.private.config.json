@@ -20,6 +20,20 @@
           "pathName": "pages/merchant/verification/refund/index",
           "query": "",
           "scene": null
+        },
+        {
+          "name": "过期提醒",
+          "pathName": "pages/merchant/recordCheck/recordCheck",
+          "query": "",
+          "launchMode": "default",
+          "scene": null
+        },
+        {
+          "name": "核销",
+          "pathName": "pages/merchant/verification/index",
+          "query": "memberCardId=555",
+          "launchMode": "default",
+          "scene": null
         }
       ]
     }
