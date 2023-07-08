@@ -27,3 +27,21 @@ page {
   border-radius: 10rpx;
   margin-left: auto;
 }
+.boxWrap{
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.box{
+  height: 500rpx;
+  margin-top: 40%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  color: #757575;
+}
+.icon-icon_wuxiaoxi-{
+  font-size: 400rpx;
+}

@@ -1,5 +1,5 @@
 <!--pages/merchant/recordCheck/recordCheck.wxml-->
-<view class="recordCheck">
+<view class="recordCheck" wx:if="{{recordsList.length>0}}">
   <view class="recordsList" wx:for="{{recordsList}}" wx:key="index">
     <view style="font-size: 32rpx;font-weight: bold;">
       {{item.accountName}}
@@ -19,12 +19,18 @@
     </view>
     <view style="display: flex;align-items: center;justify-content: space-between;">
       <view>
-      手机号：
-      {{item.telephone}}
+        手机号：
+        {{item.telephone}}
+      </view>
+      <view class="btn" data-telephone="{{item.telephone}}" catchtap="calling">
+        电话提醒
+      </view>
     </view>
-    <view class="btn" data-telephone="{{item.telephone}}" catchtap="calling">
-      电话提醒
-    </view>
-    </view>
+  </view>
+</view>
+<view class="boxWrap" wx:else>
+  <view class="box">
+    <icon class="iconfont icon-icon_wuxiaoxi-"></icon>
+    <view>亲亲，暂无待过期会员卡稍后再来吧~</view>
   </view>
 </view>

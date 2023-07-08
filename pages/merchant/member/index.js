@@ -89,15 +89,15 @@ Page({
   },
   formSubmit() {
     var telephone = that.data.telephone;
-    if (!(/^1[3456789]\d{9}$/.test(telephone)) || telephone.length < 11) {
-      wx.showToast({
-        title: '手机号有误',
-        icon: 'none',
-        duration: 2000
-      })
-    } else {
+    // if (!(/^1[23456789]\d{9}$/.test(telephone)) || telephone.length < 11) {
+    //   wx.showToast({
+    //     title: '手机号有误',
+    //     icon: 'none',
+    //     duration: 2000
+    //   })
+    // } else {
       that.memberFun(telephone);
-    }
+    // }
   },
   /**
    * 生命周期函数--监听页面显示
