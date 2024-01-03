@@ -38,7 +38,7 @@
                 <view class="radio_child_timer">
                   <text>过期截止时间</text>
                   <view class="section">
-                    <picker style="color:#ff00ff" name="startTime" mode="date" fields="day" value="{{time}}" start="2020-01-01" end="2025-12-31" bindchange="bindTimeChange">
+                    <picker style="color:#ff00ff" name="startTime" mode="date" fields="day" value="{{time}}" start="2020-01-01" bindchange="bindTimeChange">
                       {{startTime?startTime:'请选择截止日期'}}
                     </picker>
                   </view>

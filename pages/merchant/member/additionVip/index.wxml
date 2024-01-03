@@ -6,7 +6,7 @@
       <view class="selectCard" bindtap="selectCardFun">{{productName}}</view>
       <input wx:if="{{cardType=='0'}}" class="inp" name="number" placeholder="请输入会员卡剩余次数" placeholder-style="color:#bbb;" type="number" maxlength="6"  value='{{sNum}}' bindinput='watchNumber'/>
       <input wx:else class="inp" name="price" placeholder="请输入会员卡剩余金额" placeholder-style="color:#bbb;" type="digit"  value='{{price}}' bindinput='watchPrice'/>
-      <picker class="inp" name="date" mode="date" value="{{date}}" start="{{start}}" end="2025-12-30" bindchange="bindDateChange">
+      <picker class="inp" name="date" mode="date" value="{{date}}" start="{{start}}" bindchange="bindDateChange">
         <view class="picker">{{date}}</view>
       </picker>
       <button class="btn" formType="submit">新增会员</button>
